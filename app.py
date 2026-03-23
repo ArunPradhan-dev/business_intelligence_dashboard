@@ -22,7 +22,13 @@ def load_css(file_name):
 
 load_css("style.css")
 
-
+st.markdown("""
+<style>
+[data-testid="stToolbar"] {display: none;}
+footer {visibility: hidden;}
+#MainMenu {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
 
 # SESSION STATE 
 if "messages" not in st.session_state:
